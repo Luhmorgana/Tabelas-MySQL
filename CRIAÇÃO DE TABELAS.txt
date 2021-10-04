@@ -1,0 +1,67 @@
+//CRIAÇÃO DE TABELAS
+
+CREATE TABLE aluno_academiafit (
+	
+	id_aluno INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	
+	nome_aluno VARCHAR(20),
+    
+	nascimento DATE,
+	peso DOUBLE,
+	atura DOUBLE,
+	sexo CHAR(1)
+    );	
+
+//INSERIR VALORES NA TABELA
+
+INSERT INTO aluno_academiafit
+(
+	nome_aluno,
+    
+	nascimento,
+	peso,
+	atura,
+	sexo
+   )
+
+VALUES 
+('Elton Jhon','1987-11-10', 
+87.50, 
+
+1.83,
+'M');
+
+INSERT INTO aluno_academiafit
+(
+	nome_aluno,
+    
+	nascimento,
+	peso,
+	atura,
+	sexo
+   )
+
+VALUES 
+('Larissa Lemos','1990-04-20', 
+67.80, 
+
+1.56,
+'F');
+
+
+//SELECIONAR DADOS NA TABELA
+
+
+SELECT `aluno_academiafit`.`id_aluno`,
+
+    `aluno_academiafit`.`nome_aluno`,
+
+    `aluno_academiafit`.`nascimento`,
+
+    `aluno_academiafit`.`peso`,
+
+    `aluno_academiafit`.`atura`,
+
+    `aluno_academiafit`.`sexo`
+
+FROM `bd-academiafit`.`aluno_academiafit`;
